@@ -139,7 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="2_labGusarov_vs.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="adfunctions.cpp" />
+    <ClCompile Include="Pipe.cpp" />
+    <ClCompile Include="network.cpp" />
+    <ClCompile Include="Station.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adfunctions.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="Station.h" />
+    <ClInclude Include="Pipe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
