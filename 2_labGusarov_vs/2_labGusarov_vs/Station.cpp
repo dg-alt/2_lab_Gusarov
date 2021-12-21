@@ -42,3 +42,31 @@ Station::Station()
         };
     }
 }
+
+Station::Station(string name, int numberOfWorkshops, int numberOfWorkingWorkshops, int efficiency) {
+    this->name = name;
+    this->numberOfWorkshops = numberOfWorkshops;
+    this->numberOfWorkingWorkshops = numberOfWorkingWorkshops;
+    this->efficiency = efficiency;
+}
+
+Station::~Station()
+{
+}
+
+void Station::output() {
+    cout << "\nStation:";
+    cout << "\nname: " << name;
+    cout << "\nnumber of workshops: " << numberOfWorkshops;
+    cout << "\nnumber of working workshops: " << numberOfWorkingWorkshops;
+    cout << "\nEfficiency: " << efficiency << "\n";
+}
+
+void Station::edit() {
+    cout << "\nEditing station";
+    Station::output();
+    cout << "\nInput number of working workshops:\n";
+    do {
+        numberOfWorkingWorkshops = choose(numberOfWorkshops);
+    } while (numberOfWorkingWorkshops < 0 || numberOfWorkingWorkshops > numberOfWorkshops);
+}
