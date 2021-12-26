@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "network.h"
+#include "Network.h"
 
 using namespace std;
 
@@ -17,31 +17,33 @@ int main()
             cout << "\nExit\n";
             return 0;
         case 1:
-            net.pipesMap.insert();
+            net.pipesMap.insert(pair<int, Pipe>(Pipe::id, Pipe()));
             break;
         case 2:
-            net.stationsMap.insert();
+            net.stationsMap.insert(pair<int, Station>(Station::id, Station()));
             break;
         case 3:
             net.output();
             break;
         case 4:
-            net.editing();
+            net.editing(net.pipesMap);
+            //net.editObjectById(net.pipesMap);
             break;
         case 5:
-            net.editing();
+            net.editing(net.stationsMap);
+            //net.editObjectById(net.stationsMap);
             break;
         case 6:
-            net.deleting();
+            net.deleting(net.pipesMap);
             break;
         case 7:
-            net.deleting();
+            net.deleting(net.stationsMap);
             break;
         case 8:
-            net.filtration();
+            net.filtration(net.pipesMap, net.search(net.pipesMap));
             break;
         case 9:
-            net.filtration();
+            net.filtration(net.stationsMap, net.search(net.stationsMap));
             break;
         case 10:
             net.save();
