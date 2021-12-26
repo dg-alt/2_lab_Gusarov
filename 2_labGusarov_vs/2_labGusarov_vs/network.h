@@ -23,10 +23,6 @@ public:
 
 	void load();
 
-	//vector<int> search(unordered_map<int, Pipe>& map);
-
-	//vector<int> search(unordered_map<int, Station>& map);
-
 	template <typename classType>
 	void deleting(unordered_map<int, classType>& map);
 

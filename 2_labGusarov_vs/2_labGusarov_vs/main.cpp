@@ -27,11 +27,9 @@ int main()
             break;
         case 4:
             net.editing(net.pipesMap);
-            //net.editObjectById(net.pipesMap);
             break;
         case 5:
             net.editing(net.stationsMap);
-            //net.editObjectById(net.stationsMap);
             break;
         case 6:
             net.deleting(net.pipesMap);

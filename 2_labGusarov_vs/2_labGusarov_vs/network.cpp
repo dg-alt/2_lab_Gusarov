@@ -79,7 +79,7 @@ void Network::load() {
                 file >> isWorking;
 
                 pipesMap.insert(pair<int, Pipe>(id, Pipe(name, diameter, length, isWorking)));
-                // pipesMap[id] = Pipe(name, diameter, length, isWorking);  Why is it cause 2 constructor?
+                
             }
 
             if (type == "Station:") {
